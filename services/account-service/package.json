@@ -1,8 +1,8 @@
 {
-    "name": "account-service",
-    "version": "1.0.0",
+    "name": "@microservice-example/account-service",
+    "version": "0.0.0",
     "description": "",
-    "main": "handler.js",
+    "main": "src/handler.js",
     "scripts": {
         "start": "sls offline --httpPort 3002 --lambdaPort 3003",
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,9 +10,6 @@
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "devDependencies": {
-        "serverless-offline": "^6.4.0"
-    },
     "dependencies": {
         "@apollo/federation": "^0.16.5",
         "apollo-server-lambda": "^2.14.3",

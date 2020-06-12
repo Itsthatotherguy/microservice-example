@@ -1,24 +1,30 @@
 {
   "name": "microservice-example",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start_gateway": "cd gateway && npm run start",
     "start_services": "concurrently -k npm:service:*",
-    "service:account": "cd account-service && npm run start",
-    "service:inventory": "cd inventory-service && npm run start",
-    "service:product": "cd product-service && npm run start",
-    "service:review": "cd review-service && npm run start",
+    "service:account": "cd services/account-service && npm run start",
+    "service:inventory": "cd services/inventory-service && npm run start",
+    "service:product": "cd services/product-service && npm run start",
+    "service:review": "cd services/review-service && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Christiaan van der Merwe <chrisvdm0410@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "apollo-errors": "^1.9.0"
   },
   "devDependencies": {
-    "lerna": "^3.22.1"
-  }
+    "lerna": "^3.22.1",
+    "serverless-offline": "^6.4.0"
+  },
+  "private": true,
+  "workspaces": [
+    "services/*"
+  ],
+  "repository": "https://github.com/Itsthatotherguy/microservice-example.git"
 }
